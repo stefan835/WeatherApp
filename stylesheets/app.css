@@ -14,7 +14,7 @@
 
 .header {
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 170px;
 }
 
 .header__card {
@@ -39,6 +39,22 @@
 
 .form-inline .header__input {
   width: 100%;
+}
+
+.header .card-deck .card {
+  text-align: center;
+  color: #777777;
+}
+.header .card-deck .card:hover {
+  cursor: pointer;
+}
+.header .card-deck .card-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+.header .card-deck .weather-icon {
+  height: 70px;
+  width: 70px;
 }
 
 /*# sourceMappingURL=app.css.map */
