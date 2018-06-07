@@ -13,15 +13,14 @@
 <body>
 <div class="container">
     <header class="header">
-        <div class="card bg-dark text-white">
-            <img class="card-img" src="" alt="weather_background">
+        <div class="card text-white header__card">
             <div class="card-img-overlay">
-                <h1 class="card-title">Miasto</h1>
-                <h3 class="card-subtitle">Temperatura</h3>
-                <form class="form-inline">
-                    <div class="form-group mx-sm-3 mb-2">
+                <h1 class="card-title header__city">Miasto</h1>
+                <h2 class="card-subtitle header__temperature">Temperatura</h2>
+                <form class="form-inline header__from">
+                    <div class="form-group mx-sm-3 mb-2 header__form-group">
                         <label for="city" class="sr-only">Miasto</label>
-                        <input type="text" class="form-control" id="city" placeholder="Podaj miejscowość">
+                        <input type="text" class="form-control header__input" id="city" placeholder="Podaj miejscowość">
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Sprawdź</button>
                 </form>
@@ -162,7 +161,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<script src="tempConverter.js"></script>
-<script src="dataFetcher.js"></script>
+<script src="scripts/tempConverter.js"></script>
+<script src="scripts/dataFetcher.js"></script>
 </body>
 </html>
