@@ -12,9 +12,13 @@
   padding: 50px 0;
 }
 
+main {
+  width: 100%;
+}
+
 .card-icon {
-  height: 70px;
-  width: 70px;
+  max-height: 70px;
+  max-width: 70px;
   margin: 0 auto 10px;
 }
 
@@ -65,11 +69,11 @@
 }
 .header .card-deck .card-header {
   font-weight: bold;
-  font-size: 20px;
 }
 .header .card-deck .card-title {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 20px;
+  text-indent: 10px;
 }
 .header .card-deck .active-card .card-header {
   background-color: #fcb641;
@@ -78,12 +82,23 @@
   background-color: #fcb641;
 }
 
+.card-group {
+  width: 100%;
+}
+.card-group p {
+  margin: 0;
+}
 .card-group .card {
   text-align: center;
   color: #555555;
 }
 .card-group .card .card-header {
   font-weight: bold;
+}
+.card-group .card .card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-indent: 10px;
 }
 
 .btn {

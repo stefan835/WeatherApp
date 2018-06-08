@@ -24,7 +24,7 @@ const weatherUpdate = (weatherData) => {
         temp: tempConvert(item.main.temp),
         weather: item.weather[0].main,
         wind: item.wind.speed,
-        pressure: item.main.pressure
+        pressure: parseInt(item.main.pressure)
       });
     }
     else if (currentDay !== currentDate) {
@@ -34,7 +34,7 @@ const weatherUpdate = (weatherData) => {
         temp: tempConvert(item.main.temp),
         weather: item.weather[0].main,
         wind: item.wind.speed,
-        pressure: item.main.pressure
+        pressure: parseInt(item.main.pressure)
       });
     }
     else if (currentDay === currentDate && currentTime === "15:00") {
@@ -45,7 +45,7 @@ const weatherUpdate = (weatherData) => {
         temp: tempConvert(item.main.temp),
         weather: item.weather[0].main,
         wind: item.wind.speed,
-        pressure: item.main.pressure
+        pressure: parseInt(item.main.pressure)
       })
     }
     else if (currentDay === currentDate) {
@@ -54,7 +54,7 @@ const weatherUpdate = (weatherData) => {
         temp: tempConvert(item.main.temp),
         weather: item.weather[0].main,
         wind: item.wind.speed,
-        pressure: item.main.pressure
+        pressure: parseInt(item.main.pressure)
       })
     }
     currentDay = currentDate

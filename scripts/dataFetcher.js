@@ -6,9 +6,8 @@ function fetchData(city) {
         weatherUpdate(data);
         daysDisplay();
         timelineDisplay(0)
-      console.log(data)
       }
-    ).catch(err => console.log(err));
+    ).catch(err => console.log(err))
 }
 
 fetchData();
