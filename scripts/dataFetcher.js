@@ -3,7 +3,7 @@ function fetchData(city) {
     .then(response => response.json())
     .then(data => {
         headerDataDisplay(data, city);
-        weatherDataUpdate(data);
+        weatherUpdate(data);
         daysDisplay()
       }
     ).catch(err => console.log(err));

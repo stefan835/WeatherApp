@@ -1,5 +1,5 @@
 const daysDisplay = () => {
-  daysList.map((day, index) => {
+  days.map((day, index) => {
     index === 0 ?
       $('.card-deck .card-header').eq(0).text("Dziś")
       :

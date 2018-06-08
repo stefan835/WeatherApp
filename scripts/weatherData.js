@@ -1,44 +1,52 @@
-function Day(date, mainTemp, weatherConditions, timeSplit) {
+function Day(date, mainTemp, weatherConditions) {
   return {
     date,
     mainTemp,
     weatherConditions,
-    timeSplit,
+    timeSplit: [],
   }
 }
 
+let currentDay;
 let days = [];
-let newDays = [];
-let mainTemp = [];
-let weatherConditions = [];
-let daysList = [];
 
-const weatherDataUpdate = (weatherData) => {
-
-  days = [];
-  newDays = [];
-  mainTemp = [];
-  weatherConditions = [];
-  daysList = [];
-
+const weatherUpdate = (weatherData) => {
   weatherData.list.map((item) => {
-    const day = item.dt_txt.split(' ')[0];
-    const time = item.dt_txt.split(' ')[1];
-    days.push(day);
-    if (time === "15:00:00") {
-      mainTemp.push(tempConvert(item.main.temp));
-      weatherConditions.push(item.weather[0].main)
+    const currentDate = item.dt_txt.split(' ')[0];
+    const currentTime = item.dt_txt.split(' ')[1].slice(0, 5);
+
+    if (currentDay !== currentDate && currentTime === "15:00") {
+      days.push(new Day(currentDate, tempConvert(item.main.temp), item.weather[0].main));
+      days[days.length - 1].timeSplit.push({
+        time: currentTime,
+        temp: tempConvert(item.main.temp)
+      });
     }
-  });
-
-  days.filter((value, index, inputArr) => {
-    inputArr.indexOf(value) === index ? newDays.push(value) : null;
-  });
-
-  newDays.map((day, index) => {
-    let dateName = `${day.split('-')[2]}.${day.split('-')[1]}`;
-    index < 5 ? daysList.push(new Day(dateName, mainTemp[index], weatherConditions[index])) : null
-  });
+    else if (currentDay !== currentDate) {
+      days.push(new Day(currentDate));
+      days[days.length - 1].timeSplit.push({
+        time: currentTime,
+        temp: tempConvert(item.main.temp)
+      });
+    }
+    else if (currentDay === currentDate && currentTime === "15:00") {
+      days[days.length - 1].mainTemp = tempConvert(item.main.temp);
+      days[days.length - 1].weatherConditions = item.weather[0].main;
+      days[days.length - 1].timeSplit.push({
+        time: currentTime,
+        temp: tempConvert(item.main.temp)
+      })
+    }
+    else if (currentDay === currentDate) {
+      days[days.length - 1].timeSplit.push({
+        time: currentTime,
+        temp: tempConvert(item.main.temp)
+      })
+    }
+    currentDay = currentDate
+  })
 };
+
+
 
 

@@ -42,6 +42,9 @@
   padding: 12px 20px;
 }
 
+.header .card-deck {
+  margin-top: 50px;
+}
 .header .card-deck .card {
   text-align: center;
   color: #777777;
@@ -56,6 +59,10 @@
 .header .card-deck .card-header {
   font-weight: bold;
   font-size: 20px;
+}
+.header .card-deck .card-title {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 .header .card-deck .card-icon {
   height: 70px;
