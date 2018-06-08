@@ -28,7 +28,7 @@ const weatherUpdate = (weatherData) => {
       });
     }
     else if (currentDay !== currentDate) {
-      days.push(new Day(new Date(currentDate)));
+      days.push(new Day(new Date(currentDate), tempConvert(item.main.temp), item.weather[0].main));
       days[days.length - 1].timeline.push({
         time: currentTime,
         temp: tempConvert(item.main.temp),

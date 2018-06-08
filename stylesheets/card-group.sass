@@ -5,6 +5,7 @@
   .card
     text-align: center
     color: $gray-dark
+    animation: fade-in 300ms forwards
     .card-header
       font-weight: bold
       background-color: $brand-primary
@@ -30,3 +31,9 @@
   +breakpoint(desktop)
     display: flex
 
+@keyframes fade-in
+  from
+    opacity: 0
+
+  to
+    opacity: 1

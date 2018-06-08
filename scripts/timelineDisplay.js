@@ -1,6 +1,6 @@
 const timelineDisplay = (dayIndex) => {
-  const timelineContainer = $('.timeline');
-  timelineContainer.empty();
+  const $timelineContainer = $('.timeline');
+  $timelineContainer.empty();
   $('.timeline-mobile').empty();
   days[dayIndex].timeline.map((day) => {
 
@@ -15,7 +15,7 @@ const timelineDisplay = (dayIndex) => {
         )
       );
     };
-    appendTimeline(timelineContainer)
+    appendTimeline($timelineContainer)
     appendTimeline(($('.timeline-mobile').eq(dayIndex))
     );
   })

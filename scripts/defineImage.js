@@ -9,6 +9,6 @@ const defineImage = (weatherConditions) => {
     case 'Snow':
       return 'images/snow.jpg';
     default:
-      return 'images/clear.jpg';
+      return 'images/clouds.jpg';
   }
 };

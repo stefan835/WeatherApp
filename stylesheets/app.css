@@ -36,6 +36,9 @@ main {
     margin-bottom: 110px;
     text-align: left;
   }
+  .header .header__temperature, .header .header__city {
+    text-indent: 30px;
+  }
 }
 
 .header__card {
@@ -68,11 +71,13 @@ main {
 
 .header .card-deck {
   margin-top: 50px;
+  flex-direction: column;
 }
 .header .card-deck .card {
   text-align: center;
   color: #555555;
   transition: 100ms;
+  padding-bottom: 10px;
 }
 .header .card-deck .card:hover {
   cursor: pointer;
@@ -94,6 +99,11 @@ main {
 .header .card-deck .active-card:hover .card-header {
   background-color: #fcb641;
 }
+@media (min-width: 992px) {
+  .header .card-deck {
+    flex-direction: row;
+  }
+}
 
 .card-body {
   flex: 1;
@@ -113,6 +123,7 @@ main {
 .card-group .card, .timeline-mobile .card {
   text-align: center;
   color: #555555;
+  animation: fade-in 300ms forwards;
 }
 .card-group .card .card-header, .timeline-mobile .card .card-header {
   font-weight: bold;
@@ -149,6 +160,14 @@ main {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .btn {
   padding: 12px 20px;
   font-size: 1.25rem;

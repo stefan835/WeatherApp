@@ -5,7 +5,7 @@ function fetchData(city) {
         headerDataDisplay(data, city);
         weatherUpdate(data);
         daysDisplay();
-        timelineDisplay(0)
+        timelineDisplay(currentlyActiveDay)
       }
     ).catch(err => {
     $('.header__city').text('Podana błędna nazwa');
