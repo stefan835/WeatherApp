@@ -12,9 +12,15 @@
   padding: 50px 0;
 }
 
+.card-icon {
+  height: 70px;
+  width: 70px;
+  margin: 0 auto 10px;
+}
+
 .header {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 110px;
 }
 
 .header__card {
@@ -48,7 +54,7 @@
 }
 .header .card-deck .card {
   text-align: center;
-  color: #777777;
+  color: #555555;
   transition: 100ms;
 }
 .header .card-deck .card:hover {
@@ -65,15 +71,19 @@
   font-size: 18px;
   margin-bottom: 20px;
 }
-.header .card-deck .card-icon {
-  height: 70px;
-  width: 70px;
-}
 .header .card-deck .active-card .card-header {
   background-color: #fcb641;
 }
 .header .card-deck .active-card:hover .card-header {
   background-color: #fcb641;
+}
+
+.card {
+  text-align: center;
+  color: #555555;
+}
+.card .card-header {
+  font-weight: bold;
 }
 
 .btn {

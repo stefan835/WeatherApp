@@ -4,7 +4,8 @@ function fetchData(city) {
     .then(data => {
         headerDataDisplay(data, city);
         weatherUpdate(data);
-        daysDisplay()
+        daysDisplay();
+        timelineDisplay(0)
       }
     ).catch(err => console.log(err));
 }

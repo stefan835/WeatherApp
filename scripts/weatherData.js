@@ -3,7 +3,7 @@ function Day(date, mainTemp, weatherConditions) {
     date,
     mainTemp,
     weatherConditions,
-    timeSplit: [],
+    timeline: [],
   }
 }
 
@@ -17,30 +17,42 @@ const weatherUpdate = (weatherData) => {
 
     if (currentDay !== currentDate && currentTime === "15:00") {
       days.push(new Day(new Date(currentDate), tempConvert(item.main.temp), item.weather[0].main));
-      days[days.length - 1].timeSplit.push({
+      days[days.length - 1].timeline.push({
         time: currentTime,
-        temp: tempConvert(item.main.temp)
+        temp: tempConvert(item.main.temp),
+        weather: item.weather[0].main,
+        wind: item.wind.speed,
+        pressure: item.main.pressure
       });
     }
     else if (currentDay !== currentDate) {
       days.push(new Day(new Date(currentDate)));
-      days[days.length - 1].timeSplit.push({
+      days[days.length - 1].timeline.push({
         time: currentTime,
-        temp: tempConvert(item.main.temp)
+        temp: tempConvert(item.main.temp),
+        weather: item.weather[0].main,
+        wind: item.wind.speed,
+        pressure: item.main.pressure
       });
     }
     else if (currentDay === currentDate && currentTime === "15:00") {
       days[days.length - 1].mainTemp = tempConvert(item.main.temp);
       days[days.length - 1].weatherConditions = item.weather[0].main;
-      days[days.length - 1].timeSplit.push({
+      days[days.length - 1].timeline.push({
         time: currentTime,
-        temp: tempConvert(item.main.temp)
+        temp: tempConvert(item.main.temp),
+        weather: item.weather[0].main,
+        wind: item.wind.speed,
+        pressure: item.main.pressure
       })
     }
     else if (currentDay === currentDate) {
-      days[days.length - 1].timeSplit.push({
+      days[days.length - 1].timeline.push({
         time: currentTime,
-        temp: tempConvert(item.main.temp)
+        temp: tempConvert(item.main.temp),
+        weather: item.weather[0].main,
+        wind: item.wind.speed,
+        pressure: item.main.pressure
       })
     }
     currentDay = currentDate
