@@ -3,12 +3,16 @@
   padding: 0
 
 .container
-  min-height: 100vh
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  padding: 50px 0
+  padding:
+    top: 50px
+    bottom: 50px
+  +breakpoint(desktop)
+    min-height: 100vh
+
 
 main
   width: 100%

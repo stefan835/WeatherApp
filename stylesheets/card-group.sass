@@ -1,4 +1,4 @@
-.card-group
+.card-group, .timeline-mobile
   width: 100%
   p
     margin: 0
@@ -7,7 +7,26 @@
     color: $gray-dark
     .card-header
       font-weight: bold
+      background-color: $brand-primary
     .card-title
       font-size: 24px
       margin-bottom: 20px
       text-indent: 10px
+
+.header
+  .card-deck
+    .timeline-mobile
+      display: flex
+      flex-direction: column
+      +breakpoint(desktop)
+        display: none
+      .card:hover
+        cursor: default
+        .card-header
+          background-color: $brand-primary
+
+.timeline
+  display: none
+  +breakpoint(desktop)
+    display: flex
+
