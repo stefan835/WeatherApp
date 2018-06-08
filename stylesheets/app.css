@@ -78,11 +78,11 @@
   background-color: #fcb641;
 }
 
-.card {
+.card-group .card {
   text-align: center;
   color: #555555;
 }
-.card .card-header {
+.card-group .card .card-header {
   font-weight: bold;
 }
 

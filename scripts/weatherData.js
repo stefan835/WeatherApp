@@ -11,6 +11,8 @@ let currentDay;
 let days = [];
 
 const weatherUpdate = (weatherData) => {
+  days = [];
+
   weatherData.list.map((item) => {
     const currentDate = item.dt_txt.split(' ')[0];
     const currentTime = item.dt_txt.split(' ')[1].slice(0, 5);
