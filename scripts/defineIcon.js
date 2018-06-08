@@ -6,7 +6,9 @@ const defineIcon = (weatherConditions) => {
       return 'images/icons/cloudy.svg';
     case 'Rain':
       return 'images/icons/rain.svg';
+    case 'Snow':
+      return 'images/icons/snowing.svg';
     default:
-      return 'images/icons/sun.svg';
+      return 'images/icons/cloudy.svg';
   }
 };
