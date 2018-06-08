@@ -7,7 +7,10 @@ function fetchData(city) {
         daysDisplay();
         timelineDisplay(0)
       }
-    ).catch(err => console.log(err))
+    ).catch(err => {
+    $('.header__city').text('Podana błędna nazwa');
+    console.log(err)
+  })
 }
 
 fetchData();
