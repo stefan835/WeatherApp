@@ -40,6 +40,7 @@
 .form-inline .header__input {
   width: 100%;
   padding: 12px 20px;
+  font-size: 1.25rem;
 }
 
 .header .card-deck {
@@ -77,6 +78,7 @@
 
 .btn {
   padding: 12px 20px;
+  font-size: 1.25rem;
 }
 
 .btn-primary {
