@@ -13,7 +13,6 @@ let mainTemp = [];
 let weatherConditions = [];
 let daysList = [];
 
-
 const weatherDataUpdate = (weatherData) => {
 
   days = [];
@@ -22,15 +21,16 @@ const weatherDataUpdate = (weatherData) => {
   weatherConditions = [];
   daysList = [];
 
-  weatherData.list.map(item => {
+  weatherData.list.map((item) => {
     const day = item.dt_txt.split(' ')[0];
     const time = item.dt_txt.split(' ')[1];
     days.push(day);
     if (time === "15:00:00") {
-      mainTemp.push(tempConvert(item.main.temp))
+      mainTemp.push(tempConvert(item.main.temp));
       weatherConditions.push(item.weather[0].main)
     }
   });
+
   days.filter((value, index, inputArr) => {
     inputArr.indexOf(value) === index ? newDays.push(value) : null;
   });

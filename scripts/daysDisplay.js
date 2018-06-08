@@ -1,7 +1,9 @@
 const daysDisplay = () => {
   daysList.map((day, index) => {
-    $('.card-deck .card-header').eq(index).text(day.date);
-    $('.card-deck .card-header').eq(0).text("Dziś");
+    index === 0 ?
+      $('.card-deck .card-header').eq(0).text("Dziś")
+      :
+      $('.card-deck .card-header').eq(index).text(day.date);
     $('.card-deck .card-title').eq(index).text(`Temperatura: ${day.mainTemp}`);
 
     let iconSrc;
@@ -19,6 +21,6 @@ const daysDisplay = () => {
       default:
         iconSrc = 'images/icons/sun.svg';
     }
-    $('.card-deck .card-text').eq(index).empty().append($(`<img src=${iconSrc}>`).addClass('weather-icon'))
+    $('.card-deck .card-icon').eq(index).attr('src', iconSrc)
   });
 };

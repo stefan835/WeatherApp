@@ -1,0 +1,23 @@
+.header
+  .card-deck
+    .card
+      text-align: center
+      color: $gray-light
+      transition: 100ms
+      &:hover
+        cursor: pointer
+        .card-header
+          background-color: $gray-lighter
+    .card-header
+      font-weight: bold
+      font-size: 20px
+    .card-icon
+      height: 70px
+      width: 70px
+    .active-card
+      .card-header
+        background-color: $brand-secondary
+      &:hover
+        .card-header
+          background-color: $brand-secondary
+

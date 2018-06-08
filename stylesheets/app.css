@@ -14,11 +14,11 @@
 
 .header {
   width: 100%;
-  margin-bottom: 170px;
+  margin-bottom: 100px;
 }
 
 .header__card {
-  height: 300px;
+  height: 400px;
   display: flex;
   background: url("../images/background__clouds.jpg");
   background-position: left center;
@@ -39,22 +39,47 @@
 
 .form-inline .header__input {
   width: 100%;
+  padding: 12px 20px;
 }
 
 .header .card-deck .card {
   text-align: center;
   color: #777777;
+  transition: 100ms;
 }
 .header .card-deck .card:hover {
   cursor: pointer;
+}
+.header .card-deck .card:hover .card-header {
+  background-color: #e9e9e9;
 }
 .header .card-deck .card-header {
   font-weight: bold;
   font-size: 20px;
 }
-.header .card-deck .weather-icon {
+.header .card-deck .card-icon {
   height: 70px;
   width: 70px;
+}
+.header .card-deck .active-card .card-header {
+  background-color: #fcb641;
+}
+.header .card-deck .active-card:hover .card-header {
+  background-color: #fcb641;
+}
+
+.btn {
+  padding: 12px 20px;
+}
+
+.btn-primary {
+  background-color: #53a6b9;
+  border-color: #53a6b9;
+}
+.btn-primary:not(:disabled):not(.disabled):hover, .btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #3f899a;
+  border-color: #3f899a;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=app.css.map */
