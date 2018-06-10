@@ -6,8 +6,8 @@ const daysDisplay = () => {
       $cardHeader.eq(0).text("Dziś")
       :
       $cardHeader.eq(index).text(dayConvert(day.date.getDay()));
-    $('.card-deck .card-title').eq(index).text(day.mainTemp);
+    $('.day-card .card-title').eq(index).text(day.mainTemp);
 
-    $('.card-deck .card-icon').eq(index).attr('src', defineIcon(day.weatherConditions))
+    $('.day-card .card-icon').eq(index).attr('src', defineIcon(day.weatherConditions))
   });
 };
